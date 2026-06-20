@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form</h1>
+    <form action="" method="post">
+    <p>This form is used to collect details from the user</p>
+    <!-- <hr> -->
+    <label for="fname">First Name :</label>
+    <input type="text" id="fname" name="fname" placeholder="Enter Your First Name" required>
+    <br>
+    <br>
+    <label for="lname">Last Name :</label>
+    <input type="text" id="lname" name="lname" placeholder="Enter Your Last Name" minlength="10" maxlength="20">
+    <br><br>
+    <label for="password">Enter Your Password :</label>
+    <input type="password" name="password" id="password" placeholder="Enter Your Password here">
+    <br><br>
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" placeholder="Enter Your Email">
+    <br><br>
+    <label for="pno">Phone No :</label>
+    <input type="tel" name="pno" id="pno">
+    <br><br>
+        <label for="bdate">Enter Your Birth Date :</label>
+        <input type="date" placeholder="Enter Your Birth Date " id="bdate">
+    <br><br>
+        <label for="quantity">Quantity :</label>
+        <input type="number" name="quantity" id="quantity" min="10" max="50">
+    <br><br>
+        <label for="title">Title :</label>
+        <label for="Mr">Mr</label>
+        <input type="radio" name="title" id="Mr" value="Mr .">
+        <label for="Mrs">Mrs</label>
+        <input type="radio" name="title" id="Mrs" value="Mrs .">
+        <label for="Phd">PhD</label>
+        <input type="radio" name="title" id="Phd" value="PhD .">
+    <br><br>
+        <label for="pay">Payment :</label>
+        <select name="pay" id="pay">
+            <option value="" de>Select</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">MasterCard</option>
+            <option value="giftcard">GiftCard</option>
+        </select>
+    <br><br>
+        <label for="subs">Subcribe</label>
+        <input type="checkbox" name="subs" id="subs">
+    <br><br>
+    <input type="submit" >
+    <input type="reset" >
+    </form>
+</body>
+</html>
