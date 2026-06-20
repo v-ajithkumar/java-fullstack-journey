@@ -20,7 +20,7 @@ public class ProbSolve {
 //		l1.stream().distinct().sorted().forEach(n -> System.out.println(n));
 		
 		//sort descending
-		l1.stream().distinct().sorted(Comparator.reverseOrder()).forEach(n -> System.out.println(n));
+//		l1.stream().distinct().sorted(Comparator.reverseOrder()).forEach(n -> System.out.println(n));
 		
 	}
 }
