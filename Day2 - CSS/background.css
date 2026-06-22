@@ -1,0 +1,23 @@
+#p1{
+    background-color:red ;
+}
+
+div{
+    border: 4px dotted red;
+    height: 300px;
+    width: 500px;
+    background-image: url(https://imgs.search.brave.com/ej9_9yENisPvEfuqBz27abe-9TM2IcBonFE_67YbslM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGlnaC9p/cm9uLW1hbi0zLWRh/cmstZmFjZS13YWxs/cGFwZXItaGQtd2Fs/bHBhcGVyLWRlc2t0/b3Atd2FsbHBhcGVy/LTNkLWg0eDhwOHF3/ZDB3YXlxdmouanBn);
+
+    /* background-clip: content-box; */
+    background-position-y:right ;
+    background-image:linear-gradient(red,blue,green,orange) ;
+}
+
+/* body{
+    background-image: url(https://imgs.search.brave.com/ej9_9yENisPvEfuqBz27abe-9TM2IcBonFE_67YbslM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGlnaC9p/cm9uLW1hbi0zLWRh/cmstZmFjZS13YWxs/cGFwZXItaGQtd2Fs/bHBhcGVyLWRlc2t0/b3Atd2FsbHBhcGVy/LTNkLWg0eDhwOHF3/ZDB3YXlxdmouanBn);
+    background-repeat: no-repeat;
+    background-position: right 100px center;
+    background-size: ; 
+    background-attachment: fixed;
+    background-clip: border-box; 
+} */

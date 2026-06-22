@@ -1,0 +1,34 @@
+/* p{
+    color: red;
+    text-align: center;
+} */
+
+/* id selector */
+#heading2{
+    color: aqua;
+}
+
+/* class selctor */
+.para{
+    color: aquamarine;
+}
+
+/* decendent selector
+div p{
+    color: red;
+} */
+
+/* child selctor */
+/* div > p {
+    color: red;
+} */
+
+/* next sibling selctor */
+/* div + p {
+    color: red;
+} */
+
+/* subsequent selctor */
+/* div ~ p {
+    color: purple;
+} */

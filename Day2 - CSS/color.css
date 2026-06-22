@@ -1,0 +1,20 @@
+/* p{
+    background-color: rebeccapurple;
+    color: white;
+} */
+
+h3{
+    border: 1px solid black;
+}
+
+#p1{
+    color: rgb(276, 80, 155);
+}
+
+#p2{
+    color: hsl(255, 51%, 40%);
+}
+
+#p3{
+    color: #33b01c;
+}
