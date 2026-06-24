@@ -1,0 +1,30 @@
+.Box1{
+    background-color: steelblue;
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    position: sticky;
+    top:0px;
+}
+
+
+.Box2{
+    background-color: rgb(63, 202, 121);
+    width: 100px;
+    height: 100px;
+    /* position: relative;
+    left: 10px;
+    top: 10px; */
+}
+
+.Box3{
+    background-color: rgb(63, 202, 121);
+    width: 100px;
+    height: 100px;
+    /* position: absolute;
+    top: 10px; */
+
+    position: fixed;
+    top: 100px;
+    left: 400px;
+}

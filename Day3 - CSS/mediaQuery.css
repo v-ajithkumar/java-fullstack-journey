@@ -1,0 +1,23 @@
+.para1{
+    background-color: rgb(205, 221, 68);
+}
+
+.para2{
+    background-color: rgb(62, 207, 46);
+}
+
+.para3{
+    background-color: rgb(49, 208, 216);
+}
+
+@media (min-width:375px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        gap: 10px ;
+        flex-wrap: wrap;
+    }
+    .container p {
+        font-size: 13px;
+    }
+}
