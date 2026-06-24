@@ -1,0 +1,31 @@
+p{
+    font-size: 25px;
+}
+
+a:link{
+    color: red;
+}
+
+a:visited{
+    color: burlywood;
+}
+
+a:hover{
+    color: aqua;
+}
+
+a:active{
+    color: pink;
+}
+
+#name:focus{
+    background-color: aqua;
+}
+
+div p:first-child{
+    color: red;
+}
+
+div p:last-child{
+    background-color: rgb(230, 30, 207);
+}

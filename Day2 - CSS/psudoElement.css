@@ -1,0 +1,26 @@
+#para1::first-line{
+    color: red;
+}
+
+#para1::first-letter{
+    font-size: xx-large;
+}
+
+#para1::before{
+    
+    content: "";
+    display: inline-block;
+    background-image: url(https://imgs.search.brave.com/0jzGwu3o5_95CocfAgiwkla6BIQQsxSiY4RH-QqiMhs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzgzLzk0/LzIxLzgzOTQyMWRh/MWM4NTk3NDdiMzdh/MDdjMzYxYjVmODM1/LmpwZw);
+    width: 100px; /* Desired reduced size */
+    height: 100px;
+    background-size: cover;
+}
+
+::marker{
+    color: red;
+}
+
+p::selection{
+    color: red;
+    background: yellow;
+}
