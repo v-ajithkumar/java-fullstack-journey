@@ -10,8 +10,14 @@ public class SpringLearningApplication {
 	public static void main(String[] args) {
 		ApplicationContext context;
 		context = SpringApplication.run(SpringLearningApplication.class, args);
-		Dev d1 = context.getBean(Dev.class);
-		d1.build();
+		//Ioc
+//		Dev d1 = context.getBean(Dev.class);
+//		d1.build();
+
+		//DI :
+		EmployeeService employeeService = context.getBean(EmployeeService.class);
+		employeeService.showEmployee();
+
 	}
 
 }
