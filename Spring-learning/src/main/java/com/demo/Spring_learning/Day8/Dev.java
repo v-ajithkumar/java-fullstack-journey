@@ -1,4 +1,4 @@
-package com.demo.Spring_learning;
+package com.demo.Spring_learning.Day8;
 
 import org.springframework.stereotype.Component;
 
