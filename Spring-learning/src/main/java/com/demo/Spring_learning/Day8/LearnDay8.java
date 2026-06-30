@@ -6,6 +6,6 @@ public class LearnDay8 {
 //		d1.build();
 
 //		//DI :
-//		EmployeeService employeeService = context.getBean(EmployeeService.class);
-//		employeeService.showEmployee();
+//		EmployeeService employeeService1 = context.getBean(EmployeeService.class);
+//		employeeService1.showEmployee();
 }
