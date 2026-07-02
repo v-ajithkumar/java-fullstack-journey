@@ -11,8 +11,7 @@ public class SpringLearningApplication {
 	public static void main(String[] args) {
 		ApplicationContext context;
 		context = SpringApplication.run(SpringLearningApplication.class, args);
-		ConfigurationPropertyEg c1 = context.getBean(ConfigurationPropertyEg.class);
-		System.out.println(c1.getOwner());
+
 	}
 
 }
