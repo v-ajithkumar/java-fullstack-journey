@@ -1,4 +1,4 @@
-package Day9;
+package Day2;
 
 public class Employee {
         int id;

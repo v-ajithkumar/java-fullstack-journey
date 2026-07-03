@@ -1,4 +1,4 @@
-package Day9;
+package Day2;
 
 public class EmployeeDriver {
     public static void main(String[] args) {

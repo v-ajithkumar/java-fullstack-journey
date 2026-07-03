@@ -1,6 +1,4 @@
-package Day8;
-
-import java.util.Arrays;
+package Day1;
 
 public class Prob1 {
     public static void main(String[] args) {
