@@ -3,7 +3,7 @@ package com.demo.Spring_learning.Day13;
 import jakarta.persistence.*;
 
 
-@Entity
+//@Entity
 public class Employee {
 
     @Id
