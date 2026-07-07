@@ -5,6 +5,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
@@ -43,9 +47,32 @@ public class DerivedClassDemoApp {
 //            List<Employee> list = empRepo.findByDepartmentOrAge("IT",25);
 //            list.forEach(System.out::println);
         //Between
-            List<Employee> list =
-                    empRepo.findBySalaryBetween(45000,65000);
-            list.forEach(System.out::println);
+//            List<Employee> list =
+//                    empRepo.findBySalaryBetween(45000,65000);
+//            list.forEach(System.out::println);
+
+         //Jpql
+         //All emp get
+         List<Employee> list = empRepo.getAllEmployee();
+         list.forEach(System.out::println);
+         System.out.println("=========================");
+         List<Employee> list2 = empRepo.getEmployeeByDept("IT");
+         list2.forEach(System.out::println);
+         System.out.println("=========================");
+
+         //native Query
+         List<Employee> list3 = empRepo.getAllEmployeeByNativeQuery();
+         list3.forEach(System.out::println);
+            System.out.println("-----------------------");
+
+         //Pageable
+            Pageable pageable = PageRequest.of(
+                    0,
+                    2,
+                    Sort.by("name")
+            );
+            Page<Employee> page = empRepo.findAll(pageable);
+            page.getContent().forEach(System.out::println);
         };
     }
 
