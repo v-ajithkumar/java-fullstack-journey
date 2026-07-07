@@ -1,6 +1,7 @@
 package com.demo.Spring_learning.Day14.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.sql.results.graph.Fetch;
 
 @Entity
 public class Employee {
@@ -10,8 +11,8 @@ public class Employee {
     @Column
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "department_id")
+    @ManyToOne(fetch =  FetchType.EAGER)
+    @JoinColumn(name = "department_id" )
     private Department department;
 
     public Employee(){

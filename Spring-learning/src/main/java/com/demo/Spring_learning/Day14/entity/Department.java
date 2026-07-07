@@ -1,8 +1,8 @@
 package com.demo.Spring_learning.Day14.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Department {
@@ -12,9 +12,13 @@ public class Department {
     @Column
     private String name;
 
-    public Department(){
+    @OneToMany(
+            mappedBy = "department",
+            cascade = CascadeType.PERSIST
+    )
+    private List<Employee> employees;
 
-    }
+    public Department(){}
 
     public Department(int id, String name) {
         this.id = id;
