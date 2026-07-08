@@ -1,23 +1,33 @@
 package com.demo.Spring_learning.Day16.controller;
 
 import com.demo.Spring_learning.Day16.DTO.EmployeeDTO;
+import com.demo.Spring_learning.Day16.EmployeeService;
 import com.demo.Spring_learning.Day16.entity.Employee;
+import com.demo.Spring_learning.Day16.interfaces.createEmloyee;
+import com.demo.Spring_learning.Day16.repository.EmployeeRepository;
 import jakarta.validation.Valid;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/emp")
 public class EmployeeController {
 
+    @Autowired
+    private EmployeeService employeeService;
+    public EmployeeController(EmployeeService employeeService ){
+        this.employeeService = employeeService;
+    }
+
     @PostMapping("/add")
-    public String createEmployee(@Valid @RequestBody EmployeeDTO employeeDTO){
-        Employee employee = new Employee();
-        employee.setName(employeeDTO.getName());
-        employee.setEmail(employeeDTO.getEmail());
-        employee.setSalary(employeeDTO.getSalary());
+    public String createEmployee(@Validated(createEmloyee.class)
+                                     @RequestBody EmployeeDTO employeeDTO){
         return "emp created sucessfully";
+    }
+
+    @GetMapping("/get/{id}")
+    public Employee getEmployee(@PathVariable int id) {
+        return employeeService.getEmployee(id);
     }
 }

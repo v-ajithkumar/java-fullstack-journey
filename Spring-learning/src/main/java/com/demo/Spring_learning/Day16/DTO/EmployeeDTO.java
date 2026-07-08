@@ -1,16 +1,18 @@
 package com.demo.Spring_learning.Day16.DTO;
 
-
+import com.demo.Spring_learning.Day16.interfaces.createEmloyee;
 import jakarta.validation.constraints.*;
 
 public class EmployeeDTO {
 
-    @NotBlank(message = "Name is required")
+    @NotBlank(message = "{validation.name.required}")
     @Size(min = 3 , max = 30)
+    @NotNull(groups = createEmloyee.class)
     private String name;
 
     @NotBlank(message = "Email is required")
     @Email(message = "Invalid email")
+    @NotNull (groups = createEmloyee.class)
     private String email;
 
     @Positive(message = "Salary must be positive")
