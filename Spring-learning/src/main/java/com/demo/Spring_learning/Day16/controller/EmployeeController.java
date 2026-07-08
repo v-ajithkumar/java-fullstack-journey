@@ -1,5 +1,6 @@
 package com.demo.Spring_learning.Day16.controller;
 
+import com.demo.Spring_learning.Day16.DTO.ApiResponse;
 import com.demo.Spring_learning.Day16.DTO.EmployeeDTO;
 import com.demo.Spring_learning.Day16.EmployeeService;
 import com.demo.Spring_learning.Day16.entity.Employee;
@@ -21,9 +22,17 @@ public class EmployeeController {
     }
 
     @PostMapping("/add")
-    public String createEmployee(@Validated(createEmloyee.class)
-                                     @RequestBody EmployeeDTO employeeDTO){
-        return "emp created sucessfully";
+    public ApiResponse<Employee> createEmployee(@Validated(createEmloyee.class)
+                                     @RequestBody EmployeeDTO employeeDTO) {
+        Employee employee = new Employee();
+        employee.setName(employeeDTO.getName());
+        employee.setSalary(employeeDTO.getSalary());
+        employee.setEmail(employeeDTO.getEmail());
+        return new ApiResponse<>(
+                true,
+                "Employee saved succesfully",
+                employee
+        );
     }
 
     @GetMapping("/get/{id}")
