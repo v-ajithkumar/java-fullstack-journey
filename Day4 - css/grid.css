@@ -1,0 +1,79 @@
+body{
+    background-color: bisque;
+}
+
+.layout{
+    display: grid;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-columns:repeat(5,1fr);
+    grid-template-areas: 
+    "h h h h h"
+    "sb1 m m m sb2"
+    "f f f f f"
+    ;
+}
+
+.header{
+    grid-area:h ;
+}
+
+.sidebar1{
+    grid-area: sb1; 
+}
+
+.mainc{
+    grid-area:m;
+}
+
+.sidebar2{
+    grid-area: sb2; 
+}
+
+.footer{
+    grid-area: f;
+}
+.layout div{
+    border: 1px solid black;
+    background-color: lightcoral;
+    font-size: 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* column-gap: 10px;
+    row-gap: 10px; */
+    gap: 20px;
+}
+.outerbox{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 150px;
+    grid-auto-rows: 150px;
+    gap: 20px;
+    justify-items: end;
+    align-items: end;
+}
+
+.box1{
+    /* grid-column : span 3; */
+    justify-self: center;
+}
+
+.box2{
+    /* grid-row: span 2 ; */
+}
+
+.box{
+    background-color: lightgreen;
+    font-size: 4rem;
+}
+.para{
+    padding: 1rem;
+    background-color: lightcoral;
+    color: white;
+}
