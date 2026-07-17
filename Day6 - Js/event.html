@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">btn</button>
+    <input type="text" id="name">
+    <input type="text" id="input">
+    <input type="text" id="box">
+
+    <div id="parent">
+    <button id="child">Click</button>
+</div>
+</body>
+<script>
+    const button = document.getElementById("button");
+    // button.addEventListener("click" , function(){
+    //     document.body.style.backgroundColor = "lightblue"
+    // })
+    button.addEventListener("click" , function(){
+        console.log(event.target);
+        console.log(event.type);
+        console.log(event.key);
+        
+        
+    })
+    const input = document.getElementById("name")
+    input.addEventListener("change" , function(){
+        console.log(input.value);    
+    })
+
+    const input2 = document.getElementById("input")
+    input2.addEventListener("input" , function(){
+        console.log(input2.value);
+    })
+
+    const input3 = document.getElementById("box")
+    input3.addEventListener("keydown" , function(event){
+        console.log(event.key);
+    })
+
+    const parent = document.getElementById("parent");
+    const child = document.getElementById("child");
+
+    parent.addEventListener("click", function () {
+        console.log("Parent");
+    });
+
+    child.addEventListener("click", function (event) {
+        event.stopPropagation();
+        console.log("Child");
+    });
+
+</script>
+</html>
