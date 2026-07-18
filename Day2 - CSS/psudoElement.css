@@ -21,6 +21,6 @@
 }
 
 p::selection{
-    color: red;
+    color:aqua;
     background: yellow;
 }
