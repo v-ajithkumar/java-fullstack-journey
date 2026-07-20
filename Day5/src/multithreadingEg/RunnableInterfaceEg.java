@@ -15,9 +15,12 @@ public class RunnableInterfaceEg {
 			};
 		
 		Thread t1 = new Thread(book);
-		
-		t1.start();
+		Thread t2 = new Thread(book);
 		t1.setName("book1");
+		t2.setName("book2");
+		t1.start();
+		t2.start();
 		System.out.println(t1.getName());
+		System.out.println(t2.getName());
 	}
 }

@@ -35,7 +35,7 @@ public class ThreadEg {
 		Print p1 = new Print();
 		
 		b1.start();
-		b1.start();
+//		b1.start();
 		p1.start();
 		
 		if(b1.isAlive()) {
