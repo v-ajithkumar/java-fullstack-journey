@@ -3,7 +3,7 @@ package multithreadingEg;
 class CakeCounter {
 	int cakeCount;
 
-	public  void increment() {
+	public synchronized void increment() {
 		cakeCount++;
 	}
 
@@ -15,7 +15,7 @@ public class SynchronizedEg {
 		Thread team1 = new Thread(new Runnable()
 		{
 			public void run() {
-				for(int i=0 ; i<1000 ; i++) {
+				for(int i=0 ; i<5000 ; i++) {
 					count.increment();
 				}
 			}
@@ -24,7 +24,7 @@ public class SynchronizedEg {
 		Thread team2 = new Thread(new Runnable()
 		{
 			public void run() {
-				for(int i=0 ; i<1000 ; i++) {
+				for(int i=0 ; i<5000 ; i++) {
 					count.increment();
 				}
 			}
