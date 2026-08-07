@@ -5,10 +5,10 @@ import { BrowserRouter } from "react-router-dom";
 import { AuthContext } from './Day3/AuthContext.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-  <AuthContext.Provider value={{userName : "John"}}>
+  // <BrowserRouter>
+  // <AuthContext.Provider value={{userName : "John"}}>
     <App />
-   </AuthContext.Provider >
-  </BrowserRouter>
+  //  {/* </AuthContext.Provider > */}
+  // </BrowserRouter>
 
 )
