@@ -1,10 +1,10 @@
 import "./App.css";
-import GetEmployee from "./GetEmployee";
+import ComponentEg from "./Prac/Day4/Component";
 
 function App() {
   return (
     <>
-        < GetEmployee/>
+        <ComponentEg />
     </>
   );
 }
